@@ -1,0 +1,48 @@
+/* popup.css */
+body {
+    width: 220px; /* Increased width for better spacing */
+    padding: 15px;
+    background-color: #d1b3e1; /* Pastel Lavender */
+    font-family: Arial, sans-serif; /* Specify a font for better compatibility */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .volume-control {
+    text-align: center;
+    margin-bottom: 0px;
+    background-color: #ffbcd9; /* Cream Pink */
+    padding: 15px;
+    border-radius: 12px;
+  }
+  
+  #volume-slider {
+    width: 100%;
+    height: 10px;
+    -webkit-appearance: none;
+    background: #e75480; /* Dark Pink */
+    outline: none;
+    border-radius: 5px;
+  }
+  
+  #volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #e75480; /* Dark Pink */
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+  
+  footer {
+    font-size: 16px;
+    text-align: center;
+    color: #555; /* Dark Gray */
+    margin-top: 5px;
+  }
+  
