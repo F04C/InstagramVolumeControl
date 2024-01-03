@@ -1,7 +1,8 @@
 /* popup.css */
 body {
+    height: 10px;
     width: 220px; /* Increased width for better spacing */
-    padding: 15px;
+    padding: 5px;
     background-color: #d1b3e1; /* Pastel Lavender */
     font-family: Arial, sans-serif; /* Specify a font for better compatibility */
   }
@@ -17,7 +18,7 @@ body {
     margin-bottom: 0px;
     background-color: #ffbcd9; /* Cream Pink */
     padding: 15px;
-    border-radius: 12px;
+    border-radius: 10px;
   }
   
   #volume-slider {
@@ -43,6 +44,6 @@ body {
     font-size: 16px;
     text-align: center;
     color: #555; /* Dark Gray */
-    margin-top: 5px;
+    margin-top: 0px;
   }
   
