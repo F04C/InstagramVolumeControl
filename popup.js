@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   chrome.storage.sync.get(['volume'], function (result) {
     const storedVolume = result.volume || 50; // Default to 50% if no value is stored
     volumeSlider.value = storedVolume;
+    console.log('Stored Volume:', storedVolume);
 
     // Update the volume on the content script
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
