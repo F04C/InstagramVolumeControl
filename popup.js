@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const volumeSlider = document.getElementById('volume-slider');
 
   // Function to update the badge with the current volume level
-  //this doesn't update the badge during a change in the slider 
-  //check this code
   function updateBadge(volume) {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       const activeTab = tabs[0];
@@ -35,7 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       const activeTab = tabs[0];
       chrome.tabs.sendMessage(activeTab.id, { action: 'setVolume', volume: currentVolume });
-      updateBadge(currentVolume); // Update badge when volume changes 
     });
+  });
+
+  // Update badge when popup is closed
+  window.addEventListener('beforeunload', function () {
+    const currentVolume = volumeSlider.value;
+    updateBadge(currentVolume);
   });
 });
