@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
       const activeTab = tabs[0];
       chrome.tabs.sendMessage(activeTab.id, { action: 'setVolume', volume: currentVolume });
     });
+
+    // Update the badge with the current volume level
+    updateBadge(currentVolume);
   });
 
   // Update badge when popup is closed

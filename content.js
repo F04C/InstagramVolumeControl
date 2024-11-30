@@ -38,7 +38,10 @@ const observer = new MutationObserver(function (mutationsList) {
 });
 
 // Define the main content container based on the provided class names
-const mainContentContainer = document.querySelector('.x1qjc9v5.x9f619.x78zum5.xg7h5cd.xl56j7k.x1xfsgkm.xqmdsaz.x1bhewko.xgv127d.xh8yej3');
+const mainContentContainer = document.querySelector('.x1qjc9v5.x9f619.x78zum5.xg7h5cd.xl56j7k.x1xfsgkm.xqmdsaz.x1bhewko.xgv127d.xh8yej3 .x9f619 .xjbqb8w .x78zum5 .x168nmei .x13lgxp2 .x5pf9jr .xo71vjh .xyamay9 .x1pi30zi .x1l90r2v .x1swvt13 .x1uhb9sk .x1plvlek .xryxfnj .x1iyjqo2 .x2lwn1j .xeuugli .x1q0g3np .xqjyukv .xuk3077 .x1oa3qoh .x1nhvcw1');
+
+
+
 
 // Start observing the main content container
 if (mainContentContainer) {

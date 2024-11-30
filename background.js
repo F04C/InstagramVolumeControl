@@ -15,7 +15,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     chrome.tabs.sendMessage(tabId, { action: 'setVolume', volume: volume });
 
     // Update the badge with the current volume level
-    updateBadge(tabId);
+    updateBadge(tabId, volume);
+  } else if (request.action === 'setBadge') {
+    updateBadge(request.tabId, request.volume);
   }
 });
 
@@ -35,13 +37,11 @@ chrome.webNavigation.onCompleted.addListener(function (details) {
       chrome.tabs.sendMessage(tabId, { action: 'setVolume', volume: storedVolume });
 
       // Update the badge when a new Instagram page is loaded
-      updateBadge(tabId);
+      updateBadge(tabId, storedVolume);
     });
   }
 });
 
-function updateBadge(tabId) {
-  const volume = tabVolumes[tabId] || 0;
-
+function updateBadge(tabId, volume) {
   chrome.browserAction.setBadgeText({ text: volume.toString(), tabId: tabId });
 }
